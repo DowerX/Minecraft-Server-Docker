@@ -1,0 +1,26 @@
+version: "3.2"
+services:
+    minecraft:
+        image: minecraft:latest
+        ports:
+            - "27015:25565"
+            - "27016:25575"
+        volumes:
+            - type: bind
+              source: ./world
+              target: /minecraft/world
+            - type: bind
+              source: ./server.properties
+              target: /minecraft/server.properties
+            - type: bind
+              source: ./ops.json
+              target: /minecraft/ops.json           
+            - type: bind
+              source: ./whitelist.json
+              target: /minecraft/whitelist.json
+            - type: bind
+              source: ./ops.json
+              target: /minecraft/ops.json           
+            - type: bind
+              source: ./whitelist.json
+              target: /minecraft/whitelist.json
