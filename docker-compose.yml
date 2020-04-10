@@ -1,7 +1,7 @@
 version: "3.2"
 services:
     minecraft:
-        image: minecraft:latest
+        image: minecraft-server:latest
         ports:
             - "27015:25565"
             - "27016:25575"
@@ -19,8 +19,8 @@ services:
               source: ./whitelist.json
               target: /minecraft/whitelist.json
             - type: bind
-              source: ./ops.json
-              target: /minecraft/ops.json           
+              source: ./banned-ips.json
+              target: /minecraft/banned-ips.json           
             - type: bind
-              source: ./whitelist.json
-              target: /minecraft/whitelist.json
+              source: ./banned-players.json
+              target: /minecraft/banned-players.json

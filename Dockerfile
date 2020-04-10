@@ -1,4 +1,6 @@
-FROM freemanliu/openjre
+FROM alpine
+
+RUN apk add openjdk8-jre
 
 ARG TYPE=release
 ENV TY=$TYPE
@@ -19,4 +21,3 @@ RUN echo eula=TRUE > /minecraft/eula.txt
 
 WORKDIR /minecraft
 ENTRYPOINT ["java", "-jar", "/minecraft/server.jar", "nogui"]
-
