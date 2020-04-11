@@ -24,3 +24,6 @@ services:
             - type: bind
               source: ./banned-players.json
               target: /minecraft/banned-players.json
+            - type: bind
+              source: ./usercache.json
+              target: /minecraft/usercache.json

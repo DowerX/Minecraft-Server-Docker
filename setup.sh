@@ -1,6 +1,7 @@
 touch ./server.properties
-touch ./ops.json
-touch ./whitelist.json
-touch ./banned-ips.json
-touch ./banned-players.json
+echo [] > ./ops.json
+echo [] > ./whitelist.json
+echo [] > ./banned-ips.json
+echo [] > ./banned-players.json
+echo [] > ./usercache.json
 mkdir ./world
