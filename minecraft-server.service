@@ -4,7 +4,7 @@ Description=Minecraft Server
 [Service]
 Type=simple
 User=dowerx
-WorkingDirectory=/home/dowerx/minecarft-server
+WorkingDirectory=/home/dowerx/minecraft-server
 ExecStart=docker-compose up
 ExecStop=docker-compose stop
 Restart=on-failure
